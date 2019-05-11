@@ -102,7 +102,6 @@ public class App {
         } catch (IOException e) {
             e.getLocalizedMessage();
         }
-        System.out.printf("as");
         return getResponse != null ?
                 objectMapper.convertValue(getResponse.getSourceAsMap(), Item.class) : null;
     }
@@ -153,49 +152,20 @@ public class App {
             return new Gson().toJson(new StandardResponse(StatusResponse.SUCCES, new Gson().toJson(getItemById(request.params("id")))));
         }));
 
-       /* Spark.delete("/itemDelete/:id", ((request, response) -> {
 
-        }));*/
+       Spark.post( "/items/update/:id", ((request, response) -> {
+           response.type("aplication/json");
+           Item itemUpdate = new Gson().fromJson(request.body(), Item.class);
+           updateItemById(request.params("id"), itemUpdate);
+           return new Gson().toJson(new StandardResponse(StatusResponse.SUCCES));
+       }));
 
+       Spark.delete("/items/delete/:id", ((request, response) -> {
+            response.type("aplication/json");
+            deleteItemById(request.params("id"));
+            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCES));
+       }));
 
-
-
-        /*item.setId("MLA695166125");
-        item.setSiteId("MLA");
-        item.setSubtitle("null");
-        item.setSellerId(128885);
-        item.setCategoryId("MLA1055");
-        item.setPrice(55998);
-        item.setCurrencyId("ARS");
-        item.setAvailableQuantity(1);
-        item.setCondition("New");
-        item.setPictures(null);
-        item.setAcceptsMercadopago(true);
-        item.setStatus("active");
-        item.setDateCreated("2017-12-02T17:09:37.000Z");
-        item.setLastUpdated("2019-05-09T22:13:38.000Z");*/
-        //item.setName("Shubham");
-       /* item = insertItem(item);
-        System.out.println("Item inserted --> " + item.getId());
-
-        item = getItemById(item.getId());
-        System.out.printf("Item searched --> " + item.getId());*/
-
-/*
-        System.out.println("Changing name to `Shubham Aggarwal`...");
-        person.setName("Shubham Aggarwal");
-        updatePersonById(person.getPersonId(), person);
-        System.out.println("Person updated  --> " + person);
-
-        System.out.println("Getting Shubham...");
-        Person personFromDB = getPersonById(person.getPersonId());
-        System.out.println("Person from DB  --> " + personFromDB);
-
-        System.out.println("Deleting Shubham...");
-        deletePersonById(personFromDB.getPersonId());
-        System.out.println("Person Deleted");
-*/
-        //closeConnection();
     }
 
 

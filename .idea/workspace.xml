@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/App.java" description="System.out.println(&quot;Item inserted --&gt; &quot; + item.get..." line="178" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="226c0143-dee7-46dc-9913-bac9b0dbf6c7" name="Default Changelist" comment="">
+    <list default="true" id="226c0143-dee7-46dc-9913-bac9b0dbf6c7" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ElPechin/mastermeli&#10;&#10;Se añaden funcionalidades de Update y delete sobre un item en particular.">
       <change afterPath="$PROJECT_DIR$/../ElasticSearch/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ElasticSearch/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../ElasticSearch/.idea/vcs.xml" afterDir="false" />
@@ -20,10 +17,8 @@
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/StandardResponse.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/StatusResponse.java" afterDir="false" />
@@ -46,6 +41,8 @@
       <change beforePath="$PROJECT_DIR$/../GoTest2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GoTest2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GoTesting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GoTesting/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Integrantes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Integrantes/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ejercicioPractico1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ejercicioPractico1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ejercicioPractico1/ejercicioPractico1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Practico3ElasticSearch.iml" afterDir="false" />
@@ -71,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            <state relative-caret-position="420">
+              <caret line="28" column="21" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="28" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -80,20 +77,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+            <state relative-caret-position="150">
+              <caret line="155" selection-start-line="155" selection-end-line="170" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.8/jackson-databind-2.9.8.jar!/com/fasterxml/jackson/databind/DeserializationContext.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="569">
-              <caret line="382" selection-start-line="382" selection-end-line="382" />
             </state>
           </provider>
         </entry>
@@ -117,7 +105,12 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ElPechin &lt;49399926+elpechin@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -177,6 +170,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -234,12 +228,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557491206742</updated>
-      <workItem from="1557491208267" duration="14528000" />
+      <workItem from="1557491208267" duration="18141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14528000" />
+    <option name="totallyTimeSpent" value="18141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -258,10 +252,10 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32891566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -280,14 +274,24 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge branch 'master' of https://github.com/ElPechin/mastermeli&#10;&#10;Se añaden funcionalidades de Update y delete sobre un item en particular." />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/ElPechin/mastermeli&#10;&#10;Se añaden funcionalidades de Update y delete sobre un item en particular." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/App.java</url>
-          <line>105</line>
+          <line>104</line>
           <properties />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/App.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -334,13 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -348,10 +345,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar!/com/google/gson/Gson.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="461" column="17" selection-start-line="461" selection-start-column="17" selection-end-line="461" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="21" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+        <state relative-caret-position="150">
+          <caret line="155" selection-start-line="155" selection-end-line="170" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
